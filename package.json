@@ -1,0 +1,19 @@
+{
+  "name": "sport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "config": "^3.3.12",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "mongoose": "^8.12.2",
+    "pg": "^8.14.1"
+  }
+}
