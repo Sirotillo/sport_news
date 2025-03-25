@@ -5,13 +5,13 @@ const mongoose = require("mongoose");
 
 const addNewReport = async (req, res) => {
   try {
-    const { report_id, news_id, reason, status, created_at } = req.body;
+    const { user_id, news_id, reason, status, created_at } = req.body;
     const newReport = await pool.query(
       `
-            INSERT INTO reports(report_id, news_id, reason, status, created_at)
+            INSERT INTO reports(user_id, news_id, reason, status, created_at)
             VALUES ($1, $2, $3, $4, $5) RETURNING *
             `,
-      [report_id, news_id, reason, status, created_at]
+      [user_id, news_id, reason, status, created_at]
     );
 
     res

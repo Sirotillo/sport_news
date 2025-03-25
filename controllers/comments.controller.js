@@ -18,7 +18,7 @@ const addNewComment = async (req, res) => {
     } = req.body;
     const newComment = await pool.query(
       `
-            INSERT INTO comments(comment_id, news_id, content, created_at, reply_comment_id, is_approved, is_deleted, views, likes)
+            INSERT INTO comments(user_id, news_id, content, created_at, reply_comment_id, is_approved, is_deleted, views, likes)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *
             `,
       [

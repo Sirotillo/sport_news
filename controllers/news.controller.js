@@ -9,7 +9,7 @@ const addNewsNews = async (req, res) => {
       req.body;
     const newsNews = await pool.query(
       `
-            INSERT INTO newss(newss_id, category_id, author_id, status, published_at, source)
+            INSERT INTO newss(news_id, category_id, author_id, status, published_at, source)
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *
             `,
       [newss_id, category_id, author_id, status, published_at, source]
