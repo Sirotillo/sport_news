@@ -35,8 +35,8 @@ const usersSchema = new Schema(
     interests: {
       type: Number,
     },
-    bookmarks: {
-      type: Number,
+    phone_number: {
+      type: String,
     },
   },
   {

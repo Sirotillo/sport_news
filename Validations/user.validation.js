@@ -10,7 +10,7 @@ exports.userValidation = (body) => {
     is_active: Joi.boolean(),
     created_at: Joi.date(),
     interests: Joi.number(),
-    bookmarks: Joi.number(),
+    phone_number: Joi.string(),
   });
   return schemaUsers.validate(body, {
     abortEarly: false,
